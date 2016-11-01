@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/main_bg"
+    android:orientation="vertical">
+
+    <View
+        android:id="@id/id_widget_line"
+        android:layout_width="match_parent"
+        android:layout_height="10.0dip"
+        android:background="@color/color_divider" />
+
+    <TextView
+        android:id="@+id/widget8_title"
+        style="@style/ST16_1"
+        android:layout_width="wrap_content"
+        android:layout_height="46.0dip"
+        android:layout_gravity="center"
+        android:drawablePadding="21.0dip"
+        android:drawableRight="@mipmap/ic_scene_more"
+        android:gravity="center"
+        android:maxLines="1"
+        android:text="精选作品" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginRight="0.5dp">
+
+            <com.gold.palm.palmkitchen_new.ui.WImageViewS
+                android:id="@+id/widget8_img1"
+                android:layout_width="match_parent"
+                android:layout_height="0dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/widget8_img1"
+                android:layout_marginTop="-17.0dip"
+                android:orientation="vertical">
+
+                <com.gold.palm.palmkitchen_new.ui.CircleImageView
+                    android:id="@+id/widget8_avatar1"
+                    android:layout_width="34.0dip"
+                    android:layout_height="34.0dip"
+                    android:layout_gravity="center_horizontal"
+                    android:scaleType="centerCrop"
+                    android:src="@mipmap/ic_launcher"
+                    app:border_width="0dp" />
+
+                <TextView
+                    android:id="@+id/widget8_tv1"
+                    style="@style/ST14_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="3.0dip"
+                    android:gravity="center"
+                    android:maxLines="1"
+                    android:paddingLeft="10.0dip"
+                    android:paddingRight="10.0dip"
+                    android:text="" />
+            </LinearLayout>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginLeft="0.5dp"
+            android:layout_marginRight="0.5dp">
+
+            <com.gold.palm.palmkitchen_new.ui.WImageViewS
+                android:id="@+id/widget8_img2"
+                android:layout_width="match_parent"
+                android:layout_height="0dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/widget8_img2"
+                android:layout_marginTop="-17.0dip"
+                android:orientation="vertical">
+
+                <com.gold.palm.palmkitchen_new.ui.CircleImageView
+                    android:id="@+id/widget8_avatar2"
+                    android:layout_width="34.0dip"
+                    android:layout_height="34.0dip"
+                    android:layout_gravity="center_horizontal"
+                    android:scaleType="centerCrop"
+                    android:src="@mipmap/ic_launcher"
+                    app:border_width="0dp" />
+
+                <TextView
+                    android:id="@+id/widget8_tv2"
+                    style="@style/ST14_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="3.0dip"
+                    android:gravity="center"
+                    android:maxLines="1"
+                    android:paddingLeft="10.0dip"
+                    android:paddingRight="10.0dip"
+                    android:text="" />
+            </LinearLayout>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginLeft="0.5dp">
+
+            <com.gold.palm.palmkitchen_new.ui.WImageViewS
+                android:id="@+id/widget8_img3"
+                android:layout_width="match_parent"
+                android:layout_height="0dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/widget8_img3"
+                android:layout_marginTop="-17.0dip"
+                android:orientation="vertical">
+
+                <com.gold.palm.palmkitchen_new.ui.CircleImageView
+                    android:id="@+id/widget8_avatar3"
+                    android:layout_width="34.0dip"
+                    android:layout_height="34.0dip"
+                    android:layout_gravity="center_horizontal"
+                    android:scaleType="centerCrop"
+                    android:src="@mipmap/ic_launcher"
+                    app:border_width="0dp" />
+
+                <TextView
+                    android:id="@+id/widget8_tv3"
+                    style="@style/ST14_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="3.0dip"
+                    android:gravity="center"
+                    android:maxLines="1"
+                    android:paddingLeft="10.0dip"
+                    android:paddingRight="10.0dip"
+                    android:text="" />
+            </LinearLayout>
+        </RelativeLayout>
+    </LinearLayout>
+
+    <View
+        android:id="@id/id_widget_temp"
+        android:layout_width="match_parent"
+        android:layout_height="10.0dip"
+        android:background="@color/main_bg" />
+
+    <TextView
+        android:id="@+id/widget8_desc"
+        style="@style/ST12_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginLeft="13.0dip"
+        android:layout_marginRight="13.0dip"
+        android:ellipsize="end"
+        android:lineSpacingExtra="3.0dip"
+        android:maxLines="2"
+        android:paddingBottom="20.0dip"
+        android:text="晒美食，" />
+</LinearLayout>

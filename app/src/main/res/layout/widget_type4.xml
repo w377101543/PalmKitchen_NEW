@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/main_bg"
+    android:orientation="vertical">
+
+    <View
+        android:id="@+id/id_widget_line"
+        android:layout_width="match_parent"
+        android:layout_height="10.0dip"
+        android:background="@color/color_divider" />
+
+    <LinearLayout
+        android:id="@+id/id_widget_talent_more"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/id_widget_line"
+        android:gravity="center">
+
+        <TextView
+            android:id="@+id/widget4_title"
+            style="@style/ST16_1"
+            android:layout_width="wrap_content"
+            android:layout_height="46.0dip"
+            android:drawablePadding="21.0dip"
+            android:drawableRight="@mipmap/ic_scene_more"
+            android:gravity="center"
+            android:maxLines="1"
+            android:text="推荐达人" />
+    </LinearLayout>
+
+    <View
+        android:id="@+id/id_widget_talent_line1"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/main_line_size"
+        android:layout_below="@id/id_widget_talent_more"
+        android:background="@color/main_color_line" />
+
+    <LinearLayout
+        android:id="@+id/id_talent_layout1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/id_widget_talent_line1"
+        android:layout_marginBottom="7.0dip"
+        android:layout_marginTop="7.0dip"
+        android:orientation="horizontal">
+
+        <FrameLayout
+            android:layout_width="88.0dip"
+            android:layout_height="88.0dip"
+            android:layout_marginLeft="10.0dip">
+
+            <com.gold.palm.palmkitchen_new.ui.CircleImageView
+                android:id="@+id/widget4_img1"
+                android:layout_width="70.0dip"
+                android:layout_height="70.0dip"
+                android:layout_gravity="center"
+                app:border_width="0dp"
+                android:scaleType="centerCrop" />
+        </FrameLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginRight="23.0dip"
+            android:gravity="center_vertical"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/widget4_title1"
+                style="@style/ST14_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:maxLines="1"
+                android:text="" />
+
+            <TextView
+                android:id="@+id/widget4_desc1"
+                style="@style/ST12_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3.0dip"
+                android:ellipsize="end"
+                android:lineSpacingExtra="2.0dip"
+                android:maxLines="2"
+                android:text="" />
+
+            <TextView
+                android:id="@+id/widget4_follow1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4.0dip"
+                android:textColor="#ff828282"
+                android:textSize="12.0sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <View
+        android:id="@+id/id_widget_talent_line2"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/main_line_size"
+        android:layout_below="@id/id_talent_layout1"
+        android:layout_marginLeft="100.0dip"
+        android:layout_marginRight="17.0dip"
+        android:background="@color/main_color_line" />
+
+    <LinearLayout
+        android:id="@+id/id_talent_layout2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/id_widget_talent_line2"
+        android:layout_marginBottom="7.0dip"
+        android:layout_marginTop="7.0dip"
+        android:orientation="horizontal">
+
+        <FrameLayout
+            android:layout_width="88.0dip"
+            android:layout_height="88.0dip"
+            android:layout_marginLeft="10.0dip">
+
+            <com.gold.palm.palmkitchen_new.ui.CircleImageView
+                android:id="@+id/widget4_img2"
+                android:layout_width="70.0dip"
+                android:layout_height="70.0dip"
+                android:layout_gravity="center"
+                app:border_width="0dp"
+                android:scaleType="centerCrop" />
+        </FrameLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginRight="23.0dip"
+            android:gravity="center_vertical"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/widget4_title2"
+                style="@style/ST14_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:maxLines="1"
+                android:text="" />
+
+            <TextView
+                android:id="@+id/widget4_desc2"
+                style="@style/ST12_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3.0dip"
+                android:ellipsize="end"
+                android:lineSpacingExtra="2.0dip"
+                android:maxLines="2" />
+
+            <TextView
+                android:id="@+id/widget4_follow2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4.0dip"
+                android:textColor="#ff828282"
+                android:textSize="12.0sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <View
+        android:id="@+id/id_widget_talent_line3"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/main_line_size"
+        android:layout_below="@id/id_talent_layout2"
+        android:layout_marginLeft="100.0dip"
+        android:layout_marginRight="17.0dip"
+        android:background="@color/main_color_line" />
+
+    <LinearLayout
+        android:id="@+id/id_talent_layout3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/id_widget_talent_line3"
+        android:layout_marginBottom="7.0dip"
+        android:layout_marginTop="7.0dip"
+        android:orientation="horizontal">
+
+        <FrameLayout
+            android:layout_width="88.0dip"
+            android:layout_height="88.0dip"
+            android:layout_marginLeft="10.0dip">
+
+            <com.gold.palm.palmkitchen_new.ui.CircleImageView
+                android:id="@+id/widget4_img3"
+                android:layout_width="70.0dip"
+                android:layout_height="70.0dip"
+                app:border_width="0dp"
+                android:layout_gravity="center"
+                android:scaleType="centerCrop" />
+        </FrameLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginRight="23.0dip"
+            android:gravity="center_vertical"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/widget4_title3"
+                style="@style/ST14_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:maxLines="1"
+                android:text="" />
+
+            <TextView
+                android:id="@+id/widget4_desc3"
+                style="@style/ST12_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3.0dip"
+                android:ellipsize="end"
+                android:lineSpacingExtra="2.0dip"
+                android:maxLines="2" />
+
+            <TextView
+                android:id="@+id/widget4_follow3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4.0dip"
+                android:text=""
+                android:textColor="#ff828282"
+                android:textSize="12.0sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <View
+        android:id="@+id/id_widget_temp"
+        android:layout_width="match_parent"
+        android:layout_height="3.0dip"
+        android:layout_below="@id/id_talent_layout3"
+        android:background="@color/main_bg" />
+</RelativeLayout>

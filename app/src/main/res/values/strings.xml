@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">掌厨</string>
+    <string name="login_mobile">手机登录</string>
+    <string name="no_login">先逛逛</string>
+</resources>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/color_divider">
+    <com.bigkoo.convenientbanner.ConvenientBanner
+        android:id="@+id/food_book_recommend_pager"
+        android:layout_width="match_parent"
+        android:layout_height="121.0dp" />
+    <LinearLayout
+        android:id="@+id/id_scene_search"
+        android:layout_width="match_parent"
+        android:layout_height="32.0dp"
+        android:layout_marginBottom="7.0dp"
+        android:layout_marginLeft="20.0dp"
+        android:layout_marginRight="20.0dp"
+        android:layout_marginTop="7.0dp"
+        android:background="@drawable/search_view_bg"
+        android:gravity="center">
+        <TextView
+            style="@style/T12_3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:drawableLeft="@mipmap/ic_index_search"
+            android:drawablePadding="10.0dp"
+            android:gravity="center"
+            android:text="输入食材或菜名搜索" />
+    </LinearLayout>
+</LinearLayout>

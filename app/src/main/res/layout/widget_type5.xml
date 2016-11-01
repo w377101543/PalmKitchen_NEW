@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/main_bg"
+    android:orientation="vertical">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="10.0dip"
+        android:background="@color/color_divider" />
+
+
+    <TextView
+        android:id="@+id/widget5_title"
+        style="@style/ST16_1"
+        android:layout_width="wrap_content"
+        android:layout_height="46.0dip"
+        android:layout_gravity="center"
+        android:drawablePadding="21.0dip"
+        android:drawableRight="@mipmap/ic_scene_more"
+        android:gravity="center"
+        android:maxLines="1"
+        android:text="" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <FrameLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <com.gold.palm.palmkitchen_new.ui.WImageView
+                android:id="@+id/widget5_img1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop" />
+
+            <ImageView
+                android:id="@+id/widget5_play_img"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:src="@drawable/index_rank_play_bg" />
+        </FrameLayout>
+
+        <FrameLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginLeft="1dp"
+            android:layout_marginRight="1dp">
+
+            <com.gold.palm.palmkitchen_new.ui.WImageView
+                android:id="@+id/widget5_img2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop" />
+
+            <ImageView
+                android:id="@id/widget5_play_img"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:src="@drawable/index_rank_play_bg" />
+        </FrameLayout>
+
+        <FrameLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <com.gold.palm.palmkitchen_new.ui.WImageView
+                android:id="@+id/widget5_img3"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop" />
+
+            <ImageView
+                android:id="@id/widget5_play_img"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:src="@drawable/index_rank_play_bg" />
+        </FrameLayout>
+    </LinearLayout>
+
+    <View
+        android:id="@+id/widget5_temp"
+        android:layout_width="match_parent"
+        android:layout_height="13.0dip"
+        android:background="@color/main_bg" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingBottom="20.0dip">
+
+        <LinearLayout
+            android:id="@+id/widget5_btn1"
+            android:layout_width="0.0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.0"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:paddingLeft="17.0dip"
+            android:paddingRight="17.0dip">
+
+            <TextView
+                android:id="@+id/widget5_title1"
+                style="@style/ST14_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:maxLines="1"
+                android:text="" />
+
+            <TextView
+                android:id="@+id/widget5_desc1"
+                style="@style/ST12_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3.0dip"
+                android:ellipsize="end"
+                android:maxLines="2"
+                android:text="" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/widget5_btn2"
+            android:layout_width="0.0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.0"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:paddingLeft="17.0dip"
+            android:paddingRight="17.0dip">
+
+            <TextView
+                android:id="@+id/widget5_title2"
+                style="@style/ST14_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:maxLines="1"
+                android:text="" />
+
+            <TextView
+                android:id="@+id/widget5_desc2"
+                style="@style/ST12_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3.0dip"
+                android:ellipsize="end"
+                android:maxLines="2"
+                android:text="" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/widget5_btn3"
+            android:layout_width="0.0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.0"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:paddingLeft="17.0dip"
+            android:paddingRight="17.0dip">
+
+            <TextView
+                android:id="@+id/widget5_title3"
+                style="@style/ST14_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:maxLines="1"
+                android:text="" />
+
+            <TextView
+                android:id="@+id/widget5_desc3"
+                style="@style/ST12_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3.0dip"
+                android:maxLines="2"
+                android:text="" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

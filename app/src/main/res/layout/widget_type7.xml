@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/main_bg"
+    android:orientation="vertical">
+
+    <View
+        android:id="@id/id_widget_line"
+        android:layout_width="fill_parent"
+        android:layout_height="10.0dip"
+        android:background="@color/color_divider" />
+
+    <LinearLayout
+        android:id="@+id/id_widget_subject_more"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/id_widget_line"
+        android:gravity="center">
+
+        <TextView
+            android:id="@+id/widget7_title"
+            style="@style/ST16_1"
+            android:layout_width="wrap_content"
+            android:layout_height="46.0dip"
+            android:drawablePadding="21.0dip"
+            android:drawableRight="@mipmap/ic_scene_more"
+            android:gravity="center"
+            android:maxLines="1"
+            android:text="" />
+    </LinearLayout>
+
+    <com.gold.palm.palmkitchen_new.ui.WImageViewSub
+        android:id="@+id/widget7_img1"
+        android:layout_width="match_parent"
+        android:layout_height="1.0dip"
+        android:layout_below="@id/id_widget_subject_more"
+        android:background="@color/color_bitmap"
+        android:scaleType="centerCrop" />
+
+    <View
+        android:id="@id/id_widget_temp"
+        android:layout_width="fill_parent"
+        android:layout_height="5.0dip"
+        android:layout_below="@id/widget7_img1"
+        android:background="@color/main_bg" />
+
+    <TextView
+        android:id="@+id/widget7_title1"
+        style="@style/ST16_1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/id_widget_temp"
+        android:layout_marginLeft="17.0dip"
+        android:layout_marginRight="17.0dip"
+        android:gravity="center"
+        android:text="" />
+
+    <TextView
+        android:id="@+id/widget7_desc1"
+        style="@style/ST12_2"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/widget7_title1"
+        android:layout_marginLeft="17.0dip"
+        android:layout_marginRight="17.0dip"
+        android:layout_marginTop="2.0dip"
+        android:ellipsize="end"
+        android:gravity="center"
+        android:paddingBottom="28.0dip"
+        android:maxLines="1"
+        android:text="" />
+
+    <com.gold.palm.palmkitchen_new.ui.WImageViewSub
+        android:id="@+id/widget7_img2"
+        android:layout_width="match_parent"
+        android:layout_height="1.0dip"
+        android:layout_below="@id/widget7_desc1"
+        android:background="@color/color_bitmap"
+        android:scaleType="centerCrop" />
+
+    <View
+        android:id="@+id/id_widget_temp2"
+        android:layout_width="fill_parent"
+        android:layout_height="5.0dip"
+        android:layout_below="@id/widget7_img2"
+        android:background="@color/main_bg" />
+
+    <TextView
+        android:id="@+id/widget7_title2"
+        style="@style/ST16_1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/id_widget_temp2"
+        android:layout_marginLeft="17.0dip"
+        android:layout_marginRight="17.0dip"
+        android:gravity="center"
+        android:text="" />
+
+    <TextView
+        android:id="@+id/widget7_desc2"
+        style="@style/ST12_2"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/widget7_title2"
+        android:layout_marginLeft="17.0dip"
+        android:layout_marginRight="17.0dip"
+        android:layout_marginTop="2.0dip"
+        android:ellipsize="end"
+        android:gravity="center"
+        android:paddingBottom="28.0dip"
+        android:maxLines="1"
+        android:text="" />
+</RelativeLayout>

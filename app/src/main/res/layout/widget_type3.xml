@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/main_bg"
+    android:orientation="vertical">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="10.0dip"
+        android:background="@color/color_divider" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center">
+
+        <TextView
+            android:id="@+id/widget3_title"
+            style="@style/ST16_1"
+            android:layout_width="wrap_content"
+            android:layout_height="46.0dip"
+            android:drawablePadding="21.0dip"
+            android:drawableRight="@mipmap/ic_scene_more"
+            android:gravity="center"
+            android:maxLines="1"
+            android:text="早餐日记" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="13.0dip"
+        android:background="@color/main_bg" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <FrameLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_marginRight="0.5dp">
+
+            <ImageView
+                android:id="@+id/widget3_logo_img"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop" />
+
+            <TextView
+                android:id="@+id/widget3_title1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:gravity="bottom|center_horizontal"
+                android:paddingBottom="25.0dip"
+                android:maxLines="1"
+                android:text="早餐日记"
+                android:textColor="@color/main_color_w_1"
+                android:background="@color/show_color"
+                android:textSize="14.0sp" />
+
+            <TextView
+                android:id="@+id/widget3_title2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom|center_horizontal"
+                android:layout_marginLeft="5.0dip"
+                android:layout_marginRight="5.0dip"
+                android:paddingBottom="10.0dip"
+                android:maxLines="1"
+                android:text="67道菜"
+                android:textColor="@color/main_color_w_2"
+                android:textSize="10.0sp" />
+
+        </FrameLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:layout_marginRight="0.5dp"
+            android:layout_marginLeft="0.5dp">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="0.5dp">
+
+                <com.gold.palm.palmkitchen_new.ui.WImageView
+                    android:id="@+id/widget3_img1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"/>
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:src="@drawable/index_rank_play_bg" />
+            </FrameLayout>
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="0.5dp">
+
+                <com.gold.palm.palmkitchen_new.ui.WImageView
+                    android:id="@+id/widget3_img2"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"/>
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:src="@drawable/index_rank_play_bg" />
+            </FrameLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:layout_marginLeft="0.5dp">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="0.5dp">
+
+                <com.gold.palm.palmkitchen_new.ui.WImageView
+                    android:id="@+id/widget3_img3"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"/>
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:src="@drawable/index_rank_play_bg" />
+            </FrameLayout>
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="0.5dp">
+
+                <com.gold.palm.palmkitchen_new.ui.WImageView
+                    android:id="@+id/widget3_img4"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"/>
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:src="@drawable/index_rank_play_bg" />
+            </FrameLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/widget3_desc"
+        style="@style/ST12_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginLeft="13.0dip"
+        android:layout_marginRight="13.0dip"
+        android:ellipsize="end"
+        android:gravity="center"
+        android:lineSpacingExtra="3.0dip"
+        android:maxLines="2"
+        android:layout_marginTop="10dp"
+        android:paddingBottom="20.0dip"
+        android:text="当我决定出发的时候，包里一定不能没有食物。" />
+</LinearLayout>
