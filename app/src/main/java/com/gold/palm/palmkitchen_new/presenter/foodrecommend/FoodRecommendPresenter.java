@@ -6,6 +6,7 @@ import android.util.Log;
 import com.gold.palm.palmkitchen_new.bean.HomeBean;
 import com.gold.palm.palmkitchen_new.model.foodrecommend.FoodRecommendModel;
 import com.gold.palm.palmkitchen_new.model.foodrecommend.OnFoodRecommendListener;
+import com.gold.palm.palmkitchen_new.utils.AppUtils;
 import com.gold.palm.palmkitchen_new.view.view.IFoodRecommendView;
 
 /**
@@ -15,9 +16,11 @@ import com.gold.palm.palmkitchen_new.view.view.IFoodRecommendView;
 public class FoodRecommendPresenter implements IFoodRecommendPresenter {
     private FoodRecommendModel model;
     private IFoodRecommendView view;
+    private Context context;
     public FoodRecommendPresenter(IFoodRecommendView view, Context context) {
         this.view = view;
         model = new FoodRecommendModel(context);
+        this.context = context;
     }
 
     @Override
@@ -69,7 +72,7 @@ public class FoodRecommendPresenter implements IFoodRecommendPresenter {
         view.showLoading();
         HomeBean homeBean = model.getLocalData();
         Log.e("homeBean",""+homeBean);
-        if(homeBean == null){
+        if(homeBean == null|| AppUtils.isNetworkConnected(context)){
             getNetWorkData(0);
         }else {
             view.getDataSucceed(homeBean);

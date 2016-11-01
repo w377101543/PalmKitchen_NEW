@@ -15,34 +15,41 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
+import java.util.concurrent.Executors;
 
 /**
  * Created by Wang on 2016/11/1.
  */
 
 public class FileUtils {
-    public static void saveJsonBean(Context context,String json,String fileName){
-        FileOutputStream fos = null;
-        try {
-            fos = context.openFileOutput(fileName, Context.MODE_PRIVATE);
-            BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(fos));
-            bw.write(json);
-            bw.flush();
-            Log.e("Ts","数据保存成功,"+json);
-            Toast.makeText(context,"数据保存成功",Toast.LENGTH_SHORT).show();
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }finally {
-            if(fos!=null){
+    public static void saveJsonBean(final Context context, final String json, final String fileName){
+        Executors.newSingleThreadExecutor().execute(new Runnable() {
+            @Override
+            public void run() {
+                FileOutputStream fos = null;
                 try {
-                    fos.close();
+                    fos = context.openFileOutput(fileName, Context.MODE_PRIVATE);
+                    BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(fos));
+                    bw.write(json);
+                    bw.flush();
+                    Log.e("Ts","数据保存成功,"+json);
+                    Toast.makeText(context,"数据保存成功",Toast.LENGTH_SHORT).show();
+                } catch (FileNotFoundException e) {
+                    e.printStackTrace();
                 } catch (IOException e) {
                     e.printStackTrace();
+                }finally {
+                    if(fos!=null){
+                        try {
+                            fos.close();
+                        } catch (IOException e) {
+                            e.printStackTrace();
+                        }
+                    }
                 }
             }
-        }
+        });
+
     }
     public static Object getLocalBean(Context context,String fileName){
         FileInputStream fis = null;
