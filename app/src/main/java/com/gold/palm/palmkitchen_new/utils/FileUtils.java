@@ -33,7 +33,6 @@ public class FileUtils {
                     bw.write(json);
                     bw.flush();
                     Log.e("Ts","数据保存成功,"+json);
-                    Toast.makeText(context,"数据保存成功",Toast.LENGTH_SHORT).show();
                 } catch (FileNotFoundException e) {
                     e.printStackTrace();
                 } catch (IOException e) {
@@ -63,7 +62,6 @@ public class FileUtils {
                 sb.append(str);
             }
             object = JSON.parseObject(sb.toString(), HomeBean.class);
-            Toast.makeText(context,"数据读取成功",Toast.LENGTH_SHORT).show();
             Log.e("TT","数据读取成功");
         } catch (FileNotFoundException e) {
             e.printStackTrace();

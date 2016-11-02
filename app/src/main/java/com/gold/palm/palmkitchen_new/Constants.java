@@ -17,4 +17,9 @@ public interface Constants {
     String FOOD_INGREDIENT_K2 = "version";
     String FOOD_INGREDIENT_V1 = "MaterialSubtype";
     String FOOD_INGREDIENT_V2 = "4.40";
+
+    String FOOD_ASSORTMENT_K1 = "methodName";
+    String FOOD_ASSORTMENT_K2 = "version";
+    String FOOD_ASSORTMENT_V1 = "CategoryIndex";
+    String FOOD_ASSORTMENT_V2 = "4.40";
 }

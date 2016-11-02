@@ -1,17 +1,14 @@
 package com.gold.palm.palmkitchen_new.view.activity;
 
-import android.graphics.Color;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
-import android.support.v4.app.FragmentTransaction;
 import android.view.View;
 import android.widget.CheckedTextView;
 import android.widget.LinearLayout;
 
 import com.gold.palm.palmkitchen_new.R;
 import com.gold.palm.palmkitchen_new.presenter.Main.MainPresenter;
-import com.gold.palm.palmkitchen_new.utils.AppUtils;
 import com.gold.palm.palmkitchen_new.view.fragment.FoodBookFragment;
 import com.gold.palm.palmkitchen_new.view.fragment.FoodClassFragment;
 import com.gold.palm.palmkitchen_new.view.fragment.OwnerFragment;

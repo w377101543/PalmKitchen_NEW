@@ -18,6 +18,7 @@ import com.gold.palm.palmkitchen_new.bean.HomeBean;
 import com.gold.palm.palmkitchen_new.ui.CircleImageView;
 import com.gold.palm.palmkitchen_new.ui.WImageView;
 import com.gold.palm.palmkitchen_new.ui.WImageViewSub;
+import com.gold.palm.palmkitchen_new.ui.WImageView_7;
 
 import java.util.List;
 
@@ -298,9 +299,9 @@ public class RecommendCyclerAdapter extends RecyclerView.Adapter {
     }
     class ViewHolderType7 extends RecyclerView.ViewHolder{
         @BindView(R.id.widget7_img1)
-        WImageViewSub img1;
+        WImageView_7 img1;
         @BindView(R.id.widget7_img2)
-        WImageViewSub img2;
+        WImageView_7 img2;
         @BindView(R.id.widget7_title)
         TextView title;
         @BindView(R.id.widget7_desc1)

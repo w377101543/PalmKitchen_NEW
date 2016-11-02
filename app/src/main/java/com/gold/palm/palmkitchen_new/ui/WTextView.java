@@ -33,9 +33,9 @@ public class WTextView extends TextView {
 
     @Override
     protected void onMeasure(int widthMeasureSpec, int heightMeasureSpec) {
-        int width = (int) (screenWidth - TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP,10,getResources().getDisplayMetrics()));
-        int itemWidth = width/5;
-        int itemHeight = (int) (itemWidth/1.2);
+        int itemWidth = (int) ((screenWidth - TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP,70,getResources().getDisplayMetrics()))/5);
+//        itemWidth = (int) (itemWidth - TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP,25,getResources().getDisplayMetrics()));
+        int itemHeight = (int) (itemWidth/2.2);
         setMeasuredDimension(itemWidth,itemHeight);
     }
 }

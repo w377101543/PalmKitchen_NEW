@@ -45,6 +45,7 @@ public class RecommendFragment extends LazyFragment implements IFoodRecommendVie
         recyclerView.setPullRefreshEnabled(true);
         recyclerView.setLoadingMoreEnabled(false);
         recyclerView.setLoadingListener(this);
+//        recyclerView.setIsnomore(true);
         presenter = new FoodRecommendPresenter(this,getContext());
         presenter.getData();
     }
