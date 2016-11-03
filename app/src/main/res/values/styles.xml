@@ -34,4 +34,8 @@
         <item name="android:textSize">@dimen/main_text_36</item>
         <item name="android:textColor">@color/main_color_1</item>
     </style>
+    <style name="T14_1">
+        <item name="android:textSize">@dimen/main_text_42</item>
+        <item name="android:textColor">@color/main_color_1</item>
+    </style>
 </resources>

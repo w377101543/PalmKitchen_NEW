@@ -44,6 +44,7 @@ public class FoodAssortmentAdapter extends RecyclerView.Adapter {
         ViewHolder h = (ViewHolder) holder;
         h.title.setText(data.getText());
         Glide.with(fragment.getContext()).load(data.getImage()).into(h.img);
+        h.gridLayout.removeViews(1, h.gridLayout.getChildCount() - 1);
         for (int i = 0; i < data.getData().size(); i++) {
             View view = inflater.inflate(R.layout.item_sub_tv, null);
             TextView tv = (TextView) view.findViewById(R.id.sub_tv);

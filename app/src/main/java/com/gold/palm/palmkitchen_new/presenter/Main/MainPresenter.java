@@ -1,11 +1,17 @@
 package com.gold.palm.palmkitchen_new.presenter.Main;
 
+import android.content.Context;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
+import android.support.v4.view.MotionEventCompat;
 import android.widget.CheckedTextView;
 
 import com.gold.palm.palmkitchen_new.R;
+import com.gold.palm.palmkitchen_new.model.main.MainModel;
+import com.gold.palm.palmkitchen_new.utils.FileUtils;
+
+import java.util.List;
 
 /**
  * Created by Wang on 2016/10/29.
@@ -16,10 +22,14 @@ public class MainPresenter implements IMainPresenter {
     private FragmentManager fm;
     private Fragment[] fragments;
     private CheckedTextView[] ct;
-    public MainPresenter(FragmentManager fm,Fragment[] fragments,CheckedTextView[] ct) {
+    private MainModel model;
+    private Context context;
+    public MainPresenter(Context context,FragmentManager fm,Fragment[] fragments,CheckedTextView[] ct) {
         this.fm = fm;
         this.fragments = fragments;
         this.ct = ct;
+        model = new MainModel();
+        this.context = context;
     }
 
     @Override
@@ -40,4 +50,10 @@ public class MainPresenter implements IMainPresenter {
         ct[i].setChecked(true);
         currentIndex = i;
     }
+
+    @Override
+    public void getNetHot() {
+        model.getHotSearch(context);
+    }
+
 }

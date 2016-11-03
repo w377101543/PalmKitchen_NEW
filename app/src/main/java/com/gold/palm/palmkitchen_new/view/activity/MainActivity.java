@@ -36,8 +36,9 @@ public class MainActivity extends BaseActivity implements IMainView, View.OnClic
     protected void initViews() {
         fm = getSupportFragmentManager();
         initTabs();
-        presenter = new MainPresenter(fm,fragments,ct);
+        presenter = new MainPresenter(this,fm,fragments,ct);
         presenter.switchTabs(0);//第一个默认选中
+        presenter.getNetHot();
     }
     private Fragment[] fragments;
     private CheckedTextView[] ct;

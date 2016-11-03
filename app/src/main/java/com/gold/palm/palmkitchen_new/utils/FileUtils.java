@@ -1,10 +1,12 @@
 package com.gold.palm.palmkitchen_new.utils;
 
 import android.content.Context;
+import android.content.SharedPreferences;
 import android.util.Log;
 import android.widget.Toast;
 
 import com.alibaba.fastjson.JSON;
+import com.alibaba.fastjson.JSONArray;
 import com.gold.palm.palmkitchen_new.bean.HomeBean;
 
 import java.io.BufferedReader;
@@ -15,6 +17,9 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
+import java.util.HashSet;
+import java.util.Set;
+import java.util.concurrent.CompletionService;
 import java.util.concurrent.Executors;
 
 /**
@@ -79,5 +84,20 @@ public class FileUtils {
             }
             return object;
         }
+    }
+    public static void saveSearchKeyword(Context context,String keyword){
+        SharedPreferences preferences = context.getSharedPreferences("search_history", Context.MODE_PRIVATE);
+        Set<String> set = null;
+        set = preferences.getStringSet("history", set);
+        if(set == null){
+            set = new HashSet<>();
+        }
+        set.add(keyword);
+        preferences.edit().putStringSet("history",set).apply();
+        Toast.makeText(context,"搜索记录保存成功",Toast.LENGTH_SHORT).show();
+    }
+    public static Set<String> getSearchHistory(Context context){
+        SharedPreferences preferences = context.getSharedPreferences("search_history",Context.MODE_PRIVATE);
+        return preferences.getStringSet("history", null);
     }
 }

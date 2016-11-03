@@ -1,5 +1,6 @@
 package com.gold.palm.palmkitchen_new.view.fragment;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.design.widget.TabLayout;
@@ -10,6 +11,7 @@ import android.widget.ImageView;
 
 import com.gold.palm.palmkitchen_new.R;
 import com.gold.palm.palmkitchen_new.adapter.BaseFragmentPagerAdapter;
+import com.gold.palm.palmkitchen_new.view.activity.SearchActivity;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -58,6 +60,11 @@ public class FoodBookFragment extends BaseFragment {
     }
     @OnClick({R.id.food_book_search})
     public void onClick(View view){
-
+        switch (view.getId()){
+            case R.id.food_book_search:
+                startActivity(new Intent(getContext(), SearchActivity.class));
+//                getActivity().overridePendingTransition(R.anim.anim_right_in,0);
+                break;
+        }
     }
 }

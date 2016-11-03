@@ -20,6 +20,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".view.activity.GuideActivity"></activity>
+        <activity android:name=".view.activity.SearchActivity"
+            android:windowSoftInputMode="stateAlwaysVisible"/>
     </application>
 
 </manifest>

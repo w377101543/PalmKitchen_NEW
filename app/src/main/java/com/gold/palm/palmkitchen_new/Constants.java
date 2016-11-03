@@ -22,4 +22,16 @@ public interface Constants {
     String FOOD_ASSORTMENT_K2 = "version";
     String FOOD_ASSORTMENT_V1 = "CategoryIndex";
     String FOOD_ASSORTMENT_V2 = "4.40";
+
+    //softSearch
+    String SEARCH_K1 = "methodName";
+    String SEARCH_K2 = "keyword";
+    String SEARCH_K3 = "version";
+    String SEARCH_V1 = "SearchKeyword";
+    String SEARCH_V3 = "4.40";
+
+    String METHOD_NAME = "methodName";
+    String SEARCH_HOT = "SearchHot";
+    String VERSION_NAME = "version";
+    String VERSION = "4.40";
 }

@@ -1,6 +1,5 @@
 package com.gold.palm.palmkitchen_new.view.activity;
 
-import android.graphics.Color;
 import android.os.Bundle;
 import android.support.v4.view.ViewPager;
 import android.view.View;
@@ -9,12 +8,9 @@ import android.widget.Toast;
 import com.gold.palm.palmkitchen_new.R;
 import com.gold.palm.palmkitchen_new.presenter.Guide.GuidePresenter;
 import com.gold.palm.palmkitchen_new.ui.IndicatorView;
-import com.gold.palm.palmkitchen_new.utils.AppUtils;
 import com.gold.palm.palmkitchen_new.view.view.IGuideView;
 
 import butterknife.BindView;
-
-import static com.gold.palm.palmkitchen_new.R.styleable.IndicatorView;
 
 public class GuideActivity extends BaseActivity implements IGuideView {
     @BindView(R.id.guide_view_pager)

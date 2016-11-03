@@ -9,4 +9,5 @@
     <dimen name="main_text_32">10.0sp</dimen>
     <dimen name="main_text_36">12.0sp</dimen>
     <dimen name="main_line_size">0.30000007dp</dimen>
+    <dimen name="main_margin">13.299988dip</dimen>
 </resources>

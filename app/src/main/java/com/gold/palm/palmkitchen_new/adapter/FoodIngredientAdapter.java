@@ -33,9 +33,12 @@ import static android.view.ViewGroup.LayoutParams.WRAP_CONTENT;
 public class FoodIngredientAdapter extends RecyclerView.Adapter {
     private List<IngredientBean.DataFirst.DataSecond> list;
     private Fragment fragment;
+    private LayoutInflater inflater;
+
     public FoodIngredientAdapter(Fragment fragment, IngredientBean bean) {
         list = bean.getData().getData();
         this.fragment = fragment;
+        inflater = LayoutInflater.from(fragment.getContext());
     }
 
     @Override
@@ -51,7 +54,7 @@ public class FoodIngredientAdapter extends RecyclerView.Adapter {
         mHolder.title.setText(data.getText());
         final List<IngredientBean.DataFirst.DataSecond.DataThird> thirdList = data.getData();
         Glide.with(fragment.getContext()).load(data.getImage()).into(mHolder.img);
-        LayoutInflater inflater = LayoutInflater.from(fragment.getContext());
+        mHolder.gridLayout.removeViews(1, mHolder.gridLayout.getChildCount() - 1);
         for (int i = 0; i < thirdList.size(); i++) {
             View view = inflater.inflate(R.layout.item_sub_tv, null);
             TextView tv = (TextView) view.findViewById(R.id.sub_tv);
@@ -72,6 +75,7 @@ public class FoodIngredientAdapter extends RecyclerView.Adapter {
         GridLayout gridLayout;
         @BindView(R.id.grid_img)
         ImageView img;
+
         public ViewHolder(View itemView) {
             super(itemView);
             ButterKnife.bind(this, itemView);
