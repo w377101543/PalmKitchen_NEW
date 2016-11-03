@@ -2,6 +2,7 @@ package com.gold.palm.palmkitchen_new.view.view;
 
 import com.gold.palm.palmkitchen_new.bean.SoftSearchBean;
 
+import java.util.List;
 import java.util.Set;
 
 /**
@@ -9,11 +10,11 @@ import java.util.Set;
  */
 
 public interface ISearchView {
-    void search();
-    void showHistory(Set<String> history);
+    void search(String word);
+    void showHistory(List<String> history);
     void setAdapter(SoftSearchBean bean,int num);
     void showNoResult();
     void hideHistory();
     void hideIndex();
-    void addHistoryData(Set<String> history);
+    void addHistoryData(List<String> history);
 }

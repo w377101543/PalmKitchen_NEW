@@ -7,12 +7,10 @@ import com.alibaba.fastjson.JSON;
 import com.gold.palm.palmkitchen_new.Constants;
 import com.gold.palm.palmkitchen_new.bean.SoftSearchBean;
 import com.gold.palm.palmkitchen_new.utils.FileUtils;
-import com.gold.palm.palmkitchen_new.view.view.ISearchView;
 import com.zhy.http.okhttp.OkHttpUtils;
 import com.zhy.http.okhttp.callback.StringCallback;
 
 import java.util.List;
-import java.util.Set;
 
 import okhttp3.Call;
 
@@ -47,7 +45,7 @@ public class SearchModel implements ISearchModel {
     }
 
     @Override
-    public Set<String> getHistory(Context context) {
+    public List<String> getHistory(Context context) {
         return FileUtils.getSearchHistory(context);
     }
 

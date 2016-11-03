@@ -17,7 +17,9 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
+import java.util.ArrayList;
 import java.util.HashSet;
+import java.util.List;
 import java.util.Set;
 import java.util.concurrent.CompletionService;
 import java.util.concurrent.Executors;
@@ -87,17 +89,29 @@ public class FileUtils {
     }
     public static void saveSearchKeyword(Context context,String keyword){
         SharedPreferences preferences = context.getSharedPreferences("search_history", Context.MODE_PRIVATE);
-        Set<String> set = null;
-        set = preferences.getStringSet("history", set);
-        if(set == null){
-            set = new HashSet<>();
+        List<String> list;
+        String str = preferences.getString("history", null);
+        if(str != null){
+            list = JSON.parseArray(str,String.class);
+            for (int i = 0; i < list.size(); i++) {
+                if(keyword.equals(list.get(i))){
+                    list.remove(i);
+                    break;
+                }
+            }
+        }else{
+            list = new ArrayList<>();
         }
-        set.add(keyword);
-        preferences.edit().putStringSet("history",set).apply();
-        Toast.makeText(context,"搜索记录保存成功",Toast.LENGTH_SHORT).show();
+        list.add(keyword);
+        preferences.edit().putString("history",JSON.toJSONString(list)).apply();
     }
-    public static Set<String> getSearchHistory(Context context){
+    public static List<String> getSearchHistory(Context context){
         SharedPreferences preferences = context.getSharedPreferences("search_history",Context.MODE_PRIVATE);
-        return preferences.getStringSet("history", null);
+        String str = preferences.getString("history", null);
+        List<String> list = null;
+        if(str != null){
+            list = JSON.parseArray(str,String.class);
+        }
+        return list;
     }
 }

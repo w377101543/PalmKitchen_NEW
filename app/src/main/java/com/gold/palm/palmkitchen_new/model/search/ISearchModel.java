@@ -12,6 +12,6 @@ import java.util.Set;
 public interface ISearchModel {
     void getData(String keyword,OnSearchListener l);
     void saveHistory(Context context, String keyword);
-    Set<String> getHistory(Context context);
+    List<String> getHistory(Context context);
     List<String> getNetHot(Context context);
 }

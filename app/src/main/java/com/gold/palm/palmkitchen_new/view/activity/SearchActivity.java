@@ -15,6 +15,7 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.gold.palm.palmkitchen_new.R;
 import com.gold.palm.palmkitchen_new.adapter.SoftSearchAdapter;
@@ -65,12 +66,20 @@ public class SearchActivity extends BaseActivity implements ISearchView, TextWat
         presenter = new SearchPresenter(this, this);
         editText.addTextChangedListener(this);
         editText.setOnEditorActionListener(this);
-        List<String> hotList = presenter.getHotSearch(this);
+        final List<String> hotList = presenter.getHotSearch(this);
         if(hotList != null){
             for (int i = 0; i < hotList.size(); i++) {
                 View view = LayoutInflater.from(this).inflate(R.layout.item_flex_hot, null);
-                TextView tv = (TextView) view.findViewById(R.id.search_hot_tv);
-                tv.setText(hotList.get(i));
+                final TextView tv = (TextView) view.findViewById(R.id.search_hot_tv);
+                final String text = hotList.get(i);
+                tv.setText(text);
+                view.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        search(text);
+                        presenter.search(text);
+                    }
+                });
                 flexHot.addView(view);
             }
         }
@@ -79,29 +88,50 @@ public class SearchActivity extends BaseActivity implements ISearchView, TextWat
     }
 
     @Override
-    public void search() {
-        presenter.search(editText.getText().toString());
+    public void search(String word) {
+        if(word.trim().isEmpty()){
+            Toast.makeText(this,"请输入要搜索的菜名",Toast.LENGTH_SHORT).show();
+            return;
+        }
+        presenter.search(word);
+        for (int i = 0; i < flexHistory.getChildCount(); i++) {
+            View view = flexHistory.getChildAt(i);
+            TextView tv = (TextView) view.findViewById(R.id.search_history_tv);
+            if(word.equals(tv.getText().toString())){
+                flexHistory.removeView(view);
+                flexHistory.addView(view,0);
+                return;
+            }
+        }
         View view = LayoutInflater.from(this).inflate(R.layout.item_flex_history, null);
         TextView tv = (TextView) view.findViewById(R.id.search_history_tv);
-        tv.setText(editText.getText().toString());
-        flexHistory.addView(view);
+        tv.setText(word);
+        flexHistory.addView(view,0);
+        layoutHistory.setVisibility(View.VISIBLE);
     }
 
     @Override
-    public void addHistoryData(Set<String> history) {
-        flexHistory.removeAllViews();
+    public void addHistoryData(List<String> history) {
         LayoutInflater inflater = LayoutInflater.from(this);
         Iterator<String> iterator = history.iterator();
         while (iterator.hasNext()) {
-            View view = inflater.inflate(R.layout.item_flex_history, null);
-            TextView tv = (TextView) view.findViewById(R.id.search_history_tv);
+            final View view = inflater.inflate(R.layout.item_flex_history, null);
+            final TextView tv = (TextView) view.findViewById(R.id.search_history_tv);
             tv.setText(iterator.next());
-            flexHistory.addView(view);
+            view.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    flexHistory.removeView(view);
+                    flexHistory.addView(view,0);
+                    presenter.search(tv.getText().toString());
+                }
+            });
+            flexHistory.addView(view,0);
         }
     }
 
     @Override
-    public void showHistory(Set<String> history) {
+    public void showHistory(List<String> history) {
         layoutHistory.setVisibility(View.VISIBLE);
         addHistoryData(history);
     }
@@ -189,7 +219,7 @@ public class SearchActivity extends BaseActivity implements ISearchView, TextWat
                 if ("取消".equals(cancelTv.getText())) {
                     onBackPressed();
                 } else {
-                    search();
+                    search(editText.getText().toString());
                 }
                 return;
             case R.id.search_delete_img:
@@ -201,7 +231,7 @@ public class SearchActivity extends BaseActivity implements ISearchView, TextWat
     @Override
     public boolean onEditorAction(TextView v, int actionId, KeyEvent event) {
         if (actionId == EditorInfo.IME_ACTION_SEARCH || (event != null && event.getKeyCode() == KeyEvent.KEYCODE_SEARCH)) {
-            search();
+            search(editText.getText().toString());
         }
         return false;
     }

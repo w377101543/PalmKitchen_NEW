@@ -46,7 +46,7 @@ public class SearchPresenter implements ISearchPresenter {
 
     @Override
     public void getHistory() {
-        Set<String> history = model.getHistory(context);
+        List<String> history = model.getHistory(context);
         if (history != null) {
             view.showHistory(history);
             return;
