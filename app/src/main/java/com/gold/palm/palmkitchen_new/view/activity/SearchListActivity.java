@@ -46,6 +46,7 @@ public class SearchListActivity extends BaseActivity implements ISearchListView 
         recyclerView.setPullRefreshEnabled(false);
         recyclerView.setLoadingMoreEnabled(true);
         recyclerView.setLayoutManager(new LinearLayoutManager(this,LinearLayoutManager.VERTICAL,false));
+//        recyclerView.noMoreLoading();
         title.setText("为你找到");
         final SearchListPresenter presenter = new SearchListPresenter(this);
         recyclerView.setLoadingListener(new XRecyclerView.LoadingListener() {
@@ -53,11 +54,11 @@ public class SearchListActivity extends BaseActivity implements ISearchListView 
             public void onRefresh() {
 
             }
-
             @Override
             public void onLoadMore() {
                 if (presenter.getLoadedCount() >= presenter.getTotalCount()) {
                     recyclerView.setIsnomore(true);
+//                    recyclerView.noMoreLoading();
                     return;
                 }
                 presenter.loadMore(keyword);

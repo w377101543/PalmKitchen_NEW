@@ -16,6 +16,7 @@
         android:layout_marginLeft="20.0dp"
         android:layout_marginRight="20.0dp"
         android:layout_marginTop="7.0dp"
+        android:onClick="searchClick"
         android:background="@drawable/search_view_bg"
         android:gravity="center">
         <TextView

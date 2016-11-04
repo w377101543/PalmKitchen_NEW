@@ -25,9 +25,11 @@ public class SearchListAdapter extends RecyclerView.Adapter {
     private List<SearchListBean.DataFirst.DataSecond> list;
 
     private Activity activity;
+    private int lastCount;
     public SearchListAdapter(Activity activity,SearchListBean bean) {
         this.activity = activity;
         list = bean.getData().getData();
+        lastCount = list.size();
     }
 
     @Override
@@ -73,6 +75,7 @@ public class SearchListAdapter extends RecyclerView.Adapter {
     /**添加数据*/
     public void addData(SearchListBean.DataFirst data){
         list.addAll(data.getData());
-        notifyDataSetChanged();
+        lastCount += Integer.parseInt(data.getCount());
+        notifyItemRangeInserted(lastCount-1,Integer.parseInt(data.getCount()));
     }
 }

@@ -1,5 +1,6 @@
 package com.gold.palm.palmkitchen_new.view.fragment;
 
+import android.content.Intent;
 import android.support.v7.widget.LinearLayoutManager;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -13,6 +14,7 @@ import com.gold.palm.palmkitchen_new.adapter.FoodBookRecommendBannerHolder;
 import com.gold.palm.palmkitchen_new.adapter.RecommendCyclerAdapter;
 import com.gold.palm.palmkitchen_new.bean.HomeBean;
 import com.gold.palm.palmkitchen_new.presenter.foodrecommend.FoodRecommendPresenter;
+import com.gold.palm.palmkitchen_new.view.activity.SearchActivity;
 import com.gold.palm.palmkitchen_new.view.view.IFoodRecommendView;
 import com.jcodecraeer.xrecyclerview.XRecyclerView;
 
@@ -25,7 +27,7 @@ import butterknife.BindView;
  * Created by Wang on 2016/10/21.
  */
 
-public class RecommendFragment extends LazyFragment implements IFoodRecommendView, XRecyclerView.LoadingListener {
+public class RecommendFragment extends LazyFragment implements IFoodRecommendView, XRecyclerView.LoadingListener{
     @BindView(R.id.recommend_recycler)
     XRecyclerView recyclerView;
     @BindView(R.id.loading_pb)
@@ -63,12 +65,10 @@ public class RecommendFragment extends LazyFragment implements IFoodRecommendVie
     @Override
     public void getDataSucceed(HomeBean homeBean) {
         this.homeBean = homeBean;
-        Toast.makeText(getContext(), "获取数据成功", Toast.LENGTH_SHORT).show();
     }
 
     @Override
     public void getDataFailed() {
-        Toast.makeText(getContext(), "获取数据失败", Toast.LENGTH_SHORT).show();
     }
 
     @Override
@@ -91,6 +91,12 @@ public class RecommendFragment extends LazyFragment implements IFoodRecommendVie
         banner.setManualPageable(true);
         banner.setScrollDuration(1200);
         banner.startTurning(8000);
+        view.findViewById(R.id.id_scene_search).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                getActivity().startActivity(new Intent(getActivity(),SearchActivity.class));
+            }
+        });
         recyclerView.addHeaderView(view);
         adapter = new RecommendCyclerAdapter(homeBean, getContext());
         recyclerView.setAdapter(adapter);
@@ -116,4 +122,7 @@ public class RecommendFragment extends LazyFragment implements IFoodRecommendVie
     @Override
     protected void lazyLoad() {
     }
+//    public void searchClick(View view){
+//        getActivity().startActivity(new Intent(getActivity(),SearchActivity.class));
+//    }
 }

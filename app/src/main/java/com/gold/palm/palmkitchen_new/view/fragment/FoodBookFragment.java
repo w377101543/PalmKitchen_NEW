@@ -8,6 +8,7 @@ import android.support.v4.app.Fragment;
 import android.support.v4.view.ViewPager;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 
 import com.gold.palm.palmkitchen_new.R;
 import com.gold.palm.palmkitchen_new.adapter.BaseFragmentPagerAdapter;
@@ -63,8 +64,7 @@ public class FoodBookFragment extends BaseFragment {
         switch (view.getId()){
             case R.id.food_book_search:
                 startActivity(new Intent(getContext(), SearchActivity.class));
-//                getActivity().overridePendingTransition(R.anim.anim_right_in,0);
-                break;
+                return;
         }
     }
 }
