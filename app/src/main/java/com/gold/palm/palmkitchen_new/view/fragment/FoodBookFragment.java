@@ -24,7 +24,7 @@ import butterknife.OnClick;
  * Created by Wang on 2016/10/20.
  */
 
-public class FoodBookFragment extends BaseFragment {
+public class FoodBookFragment extends LazyFragment {
     @BindView(R.id.food_book_pager)
     ViewPager pager;
     @BindView(R.id.food_book_tab)
@@ -53,7 +53,6 @@ public class FoodBookFragment extends BaseFragment {
         stringList.add("食材");
         stringList.add("分类");
         adapter = new BaseFragmentPagerAdapter(getChildFragmentManager(),fragments,stringList);
-        pager.setOffscreenPageLimit(0);
         pager.setAdapter(adapter);
         tablayout.setTabMode(TabLayout.MODE_FIXED);
         pager.addOnPageChangeListener(new TabLayout.TabLayoutOnPageChangeListener(tablayout));
@@ -66,5 +65,10 @@ public class FoodBookFragment extends BaseFragment {
                 startActivity(new Intent(getContext(), SearchActivity.class));
                 return;
         }
+    }
+
+    @Override
+    protected void lazyLoad() {
+
     }
 }

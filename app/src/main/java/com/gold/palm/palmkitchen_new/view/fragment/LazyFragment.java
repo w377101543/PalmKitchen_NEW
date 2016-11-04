@@ -9,7 +9,7 @@ public abstract class LazyFragment extends BaseFragment {
      * Fragment当前状态是否可见
      */
     protected boolean isVisible;
-    protected int hasLoadData = 0;
+    protected boolean noData = true;
     @Override
     public void setUserVisibleHint(boolean isVisibleToUser) {
         super.setUserVisibleHint(isVisibleToUser);
@@ -25,6 +25,7 @@ public abstract class LazyFragment extends BaseFragment {
      * 可见
      */
     protected void onVisible() {
+        noData = false;
         lazyLoad();
     }
     /**

@@ -10,7 +10,7 @@ import android.widget.LinearLayout;
 import com.gold.palm.palmkitchen_new.R;
 import com.gold.palm.palmkitchen_new.presenter.Main.MainPresenter;
 import com.gold.palm.palmkitchen_new.view.fragment.FoodBookFragment;
-import com.gold.palm.palmkitchen_new.view.fragment.FoodClassFragment;
+import com.gold.palm.palmkitchen_new.view.fragment.LifeFragment;
 import com.gold.palm.palmkitchen_new.view.fragment.OwnerFragment;
 import com.gold.palm.palmkitchen_new.view.fragment.SheQuFragment;
 import com.gold.palm.palmkitchen_new.view.view.IMainView;
@@ -45,7 +45,7 @@ public class MainActivity extends BaseActivity implements IMainView, View.OnClic
     /**
      * 初始化底部Tab**/
     private void initTabs() {
-        fragments = new Fragment[]{new FoodBookFragment(),new FoodClassFragment(),new SheQuFragment(),new OwnerFragment()};
+        fragments = new Fragment[]{new FoodBookFragment(),new LifeFragment(),new SheQuFragment(),new OwnerFragment()};
         ct = new CheckedTextView[tabContainer.getChildCount()];
         for (int i = 0; i < tabContainer.getChildCount(); i++) {
             ct[i] = (CheckedTextView) tabContainer.getChildAt(i);

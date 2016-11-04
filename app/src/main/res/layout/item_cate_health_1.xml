@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="60dp"
+    android:layout_height="60dp">
+    <com.gold.palm.palmkitchen_new.ui.CircleImageView
+        android:id="@+id/cate_health_1_img"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:src="@mipmap/default_load_p"
+        android:layout_gravity="center"
+        android:scaleType="centerCrop"/>
+</FrameLayout>
