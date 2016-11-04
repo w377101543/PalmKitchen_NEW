@@ -1,5 +1,6 @@
 package com.gold.palm.palmkitchen_new.view.activity;
 
+import android.content.Intent;
 import android.graphics.Color;
 import android.text.Editable;
 import android.text.Spannable;
@@ -88,11 +89,14 @@ public class SearchActivity extends BaseActivity implements ISearchView, TextWat
     }
 
     @Override
-    public void search(String word) {
+    public void search(final String word) {
         if(word.trim().isEmpty()){
             Toast.makeText(this,"请输入要搜索的菜名",Toast.LENGTH_SHORT).show();
             return;
         }
+        Intent intent = new Intent(this,SearchListActivity.class);
+        intent.putExtra("keyword",word);
+        startActivity(intent);
         presenter.search(word);
         for (int i = 0; i < flexHistory.getChildCount(); i++) {
             View view = flexHistory.getChildAt(i);
@@ -102,10 +106,17 @@ public class SearchActivity extends BaseActivity implements ISearchView, TextWat
                 flexHistory.addView(view,0);
                 return;
             }
+
         }
         View view = LayoutInflater.from(this).inflate(R.layout.item_flex_history, null);
         TextView tv = (TextView) view.findViewById(R.id.search_history_tv);
         tv.setText(word);
+        view.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                search(word);
+            }
+        });
         flexHistory.addView(view,0);
         layoutHistory.setVisibility(View.VISIBLE);
     }
@@ -121,9 +132,8 @@ public class SearchActivity extends BaseActivity implements ISearchView, TextWat
             view.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    flexHistory.removeView(view);
-                    flexHistory.addView(view,0);
                     presenter.search(tv.getText().toString());
+                    search(tv.getText().toString());
                 }
             });
             flexHistory.addView(view,0);

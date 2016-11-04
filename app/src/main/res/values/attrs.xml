@@ -26,4 +26,8 @@
         <attr name="border_width" format="dimension" />
         <attr name="border_color" format="color" />
     </declare-styleable>
+    <declare-styleable name="RoundImageView">
+        <attr name="radius" format="dimension"/>
+        <attr name="circle" format="boolean"/>
+    </declare-styleable>
 </resources>
