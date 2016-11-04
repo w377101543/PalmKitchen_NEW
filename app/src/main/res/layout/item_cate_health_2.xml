@@ -23,34 +23,35 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/life_img"
-        android:layout_marginTop="15dp"
+        android:layout_marginTop="12dp"
         android:layout_marginLeft="20dp"
         android:textSize="16sp"
+        android:textColor="#404040"
         android:text="这是一个标题"/>
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/life_logo"
-        android:layout_marginTop="15dp"
+        android:layout_marginTop="12dp"
         android:layout_marginLeft="20dp"
-        android:layout_marginBottom="25dp">
+        android:layout_marginBottom="20dp">
         <TextView
             android:id="@+id/life_episode"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="更新至1集"/>
+            android:textColor="#C8C8C8"/>
         <TextView
             android:id="@+id/life_play"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="上课人数3324人"
+            android:textColor="#C8C8C8"
             android:layout_centerInParent="true"/>
         <TextView
             android:id="@+id/life_album"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="咯额网"
             android:layout_marginRight="20dp"
+            android:textColor="#C8C8C8"
             android:layout_alignParentRight="true"/>
     </RelativeLayout>
 </RelativeLayout>
