@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/main_bg"
+    android:orientation="vertical">
+
+    <com.bigkoo.convenientbanner.ConvenientBanner
+        android:id="@+id/nominate_convenientBanner"
+        android:layout_width="match_parent"
+        android:layout_height="121.0dip" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="10.0dip"
+        android:background="@color/color_divider" />
+
+    <LinearLayout
+        android:id="@+id/nominate_tag_more_btn"
+        android:layout_width="match_parent"
+        android:layout_height="48.0dip"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/nominate_recommend_title"
+            style="@style/ST16_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10.0dip"
+            android:drawableLeft="@mipmap/ic_talent"
+            android:drawablePadding="10.0dip"
+            android:gravity="center"
+            android:text="达人" />
+
+        <TextView
+            android:layout_width="0.0dip"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10.0dip"
+            android:layout_weight="1.0"
+            android:drawableRight="@mipmap/ic_more"
+            android:gravity="right" />
+    </LinearLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/head1_recycler"
+        android:layout_width="match_parent"
+        android:layout_height="118.0dip"
+        android:background="@color/main_bg"
+        android:paddingBottom="8.0dip" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="10.0dip"
+        android:background="@color/color_divider" />
+
+    <LinearLayout
+        android:id="@+id/nominate2_tag_more_btn"
+        android:layout_width="match_parent"
+        android:layout_height="48.0dip"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/nominate2_recommend_title"
+            style="@style/ST16_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10.0dip"
+            android:drawableLeft="@mipmap/ic_card_recommend"
+            android:drawablePadding="10.0dip"
+            android:gravity="center"
+            android:text="精选作品" />
+
+        <TextView
+            android:layout_width="0.0dip"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10.0dip"
+            android:layout_weight="1.0"
+            android:drawableRight="@mipmap/ic_more"
+            android:gravity="right" />
+    </LinearLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/head2_recycler"
+        android:layout_width="match_parent"
+        android:layout_height="120.0dip"
+        android:background="@color/main_bg"
+        android:paddingBottom="8.0dip" />
+</LinearLayout>

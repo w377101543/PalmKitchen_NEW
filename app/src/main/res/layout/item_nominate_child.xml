@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    android:orientation="horizontal">
+
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:background="@color/color_divider">
+
+        <ImageView
+            android:id="@+id/nominate_post"
+            android:layout_width="112.0dip"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop" />
+
+        <ImageView
+            android:id="@+id/nominate_play_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:src="@drawable/index_rank_play_bg"
+            android:visibility="gone" />
+    </FrameLayout>
+
+    <View
+        android:id="@+id/nominate_divider"
+        android:layout_width="1.0dip"
+        android:layout_height="match_parent"
+        android:background="@color/main_bg" />
+</LinearLayout>
