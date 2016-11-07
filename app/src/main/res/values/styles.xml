@@ -38,4 +38,8 @@
         <item name="android:textSize">@dimen/main_text_42</item>
         <item name="android:textColor">@color/main_color_1</item>
     </style>
+    <style name="ST14_3">
+        <item name="android:textSize">@dimen/main_text_42</item>
+        <item name="android:textColor">@color/main_she_qu_color_3</item>
+    </style>
 </resources>
