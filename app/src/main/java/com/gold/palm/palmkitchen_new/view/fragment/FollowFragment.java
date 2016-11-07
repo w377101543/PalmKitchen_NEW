@@ -41,12 +41,12 @@ public class FollowFragment extends BaseFragment implements IFollowView{
         recyclerView.setLayoutManager(new LinearLayoutManager(getActivity(),LinearLayoutManager.VERTICAL,false));
         presenter = new FollowPresenter(this);
         recyclerView.setLoadingMoreEnabled(true);
-        recyclerView.setPullRefreshEnabled(false);
+        recyclerView.setPullRefreshEnabled(true);
         parent = (SheQuFragment) getParentFragment();
         recyclerView.setLoadingListener(new XRecyclerView.LoadingListener() {
             @Override
             public void onRefresh() {
-
+                presenter.refresh();
             }
 
             @Override
@@ -92,6 +92,21 @@ public class FollowFragment extends BaseFragment implements IFollowView{
     @Override
     public void loadMoreComplete() {
         recyclerView.loadMoreComplete();
+    }
+
+    @Override
+    public void refreshComplete() {
+        recyclerView.refreshComplete();
+    }
+
+    @Override
+    public void resetData(FollowBean bean) {
+        adapter.resetData(bean);
+    }
+
+    @Override
+    public void noMoreData() {
+        recyclerView.noMoreLoading();
     }
 
 }

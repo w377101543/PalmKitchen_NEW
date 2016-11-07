@@ -59,4 +59,8 @@ public class NominateAdapter extends RecyclerView.Adapter {
             recyclerView.setAdapter(adapter);
         }
     }
+    public void setData(NominateBean bean){
+        this.list = bean.getData().getShequ_topics();
+        notifyDataSetChanged();
+    }
 }

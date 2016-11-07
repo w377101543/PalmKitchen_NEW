@@ -42,6 +42,8 @@ public class NominateFragment extends BaseFragment implements INominateView{
     @Override
     protected void initViews() {
         final SheQuFragment parent = (SheQuFragment) getParentFragment();
+        recyclerView.setLoadingMoreEnabled(false);
+        recyclerView.setPullRefreshEnabled(true);
         recyclerView.setLayoutManager(new LinearLayoutManager(getContext(),LinearLayoutManager.VERTICAL,false));
         recyclerView.addOnScrollListener(new RecyclerView.OnScrollListener() {
             @Override
@@ -54,10 +56,21 @@ public class NominateFragment extends BaseFragment implements INominateView{
                 }
             }
         });
+        recyclerView.setLoadingListener(new XRecyclerView.LoadingListener() {
+            @Override
+            public void onRefresh() {
+                presenter.refresh();
+            }
+
+            @Override
+            public void onLoadMore() {
+
+            }
+        });
         presenter = new NominatePresenter(this);
         presenter.getData();
-    }
 
+    }
     @Override
     public void showLoading() {
         pb.setVisibility(View.VISIBLE);
@@ -107,6 +120,7 @@ public class NominateFragment extends BaseFragment implements INominateView{
 
     @Override
     public void notifyData(NominateBean bean) {
-
+        adapter.setData(bean);
+        recyclerView.refreshComplete();
     }
 }

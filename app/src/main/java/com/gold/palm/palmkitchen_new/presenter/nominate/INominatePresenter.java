@@ -6,4 +6,5 @@ package com.gold.palm.palmkitchen_new.presenter.nominate;
 
 public interface INominatePresenter {
     void getData();
+    void refresh();
 }

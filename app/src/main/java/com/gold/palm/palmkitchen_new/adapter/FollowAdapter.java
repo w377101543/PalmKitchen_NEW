@@ -194,4 +194,9 @@ public class FollowAdapter extends RecyclerView.Adapter {
         notifyItemRangeInserted(loadedCount + 1, bean.getData().getCount());
         loadedCount += bean.getData().getCount();
     }
+    public void resetData(FollowBean bean){
+        this.list = bean.getData().getData();
+        notifyDataSetChanged();
+        loadedCount = list.size();
+    }
 }

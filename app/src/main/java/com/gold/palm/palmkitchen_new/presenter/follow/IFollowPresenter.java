@@ -8,4 +8,5 @@ public interface IFollowPresenter {
     void getData();
     void loadMore();
     int getTotalCount();
+    void refresh();
 }

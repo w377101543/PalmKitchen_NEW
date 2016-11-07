@@ -12,4 +12,7 @@ public interface IFollowView {
     void setAdapter(FollowBean bean);
     void notifyData(FollowBean bean);
     void loadMoreComplete();
+    void refreshComplete();
+    void resetData(FollowBean bean);
+    void noMoreData();
 }

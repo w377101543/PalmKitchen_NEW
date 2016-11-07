@@ -35,4 +35,19 @@ public class NominatePresenter implements INominatePresenter {
             }
         });
     }
+
+    @Override
+    public void refresh() {
+        model.getData(new OnFinishListener() {
+            @Override
+            public void onSuccess(NominateBean bean) {
+                view.notifyData(bean);
+            }
+
+            @Override
+            public void onFailed() {
+
+            }
+        });
+    }
 }
